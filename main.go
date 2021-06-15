@@ -1,14 +1,13 @@
 package main
 
 import (
-    "github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
 
-    r := gin.Default()
-    app.Router(r)
-    r.run(":8080")
+	router := gin.Default()
+	SetupRouter(router)
+	router.Run(":8080")
 
 }
-
